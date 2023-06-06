@@ -16,5 +16,6 @@
         "express": "^4.17.3",
         "mongoose": "^6.3.0",
         "node-fetch": "^2.0.0"
-    }
+    },
+    "proxy": "http://localhost:4000"
 }
