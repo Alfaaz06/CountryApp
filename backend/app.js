@@ -9,7 +9,9 @@ app.use(express.json());
 
 app.use('/api/v1', data);
 
-app.use(express.static(path.resolve("./frontend/build")));
-app.get('/*', function(req, res) {
-    res.sendFile(path.resolve("./frontend/build/index.html"));
+const __dirname = path.resolve();
+
+app.use(express.static(path.join(__dirname, "./frontend/build")));
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, "./frontend/build/index.html"));
 });
